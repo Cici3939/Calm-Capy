@@ -31,17 +31,18 @@ struct HomeView: View {
                 MainButton(title: "Breathe with Capy",
                            background: Color("Default"),
                            textColor: Color("TextColor"),
-                           imageName: "Chatbot",
+                           imageName: "Breathe with Capy",
                            newView: BreatheView())
                 .padding(.top)
                 .padding(.leading)
                 .padding(.trailing)
                 
-                MainButton(title: "Mood Detector",
+                MainButton(title: "Mood Recorder",
                            background: Color("Default"),
                            textColor: Color("TextColor"),
-                           imageName: "Chatbot",
-                           newView: MoodClassifierView(moods: Mood(happy: 0, sad: 0, fearful: 0, angry: 0, neutral: 0, userId: Auth.auth().currentUser?.uid ?? "", timestamp: Date())))
+                           imageName: "Mood Tracker",
+                           newView: MoodRecorderView()
+                           )
                 .padding(.top)
                 .padding(.leading)
                 .padding(.trailing)
@@ -49,7 +50,7 @@ struct HomeView: View {
                 MainButton(title: "Journal",
                            background: Color("Default"),
                            textColor: Color("TextColor"),
-                           imageName: "Chatbot",
+                           imageName: "Journal",
                            newView: JournalView())
                 .padding(.top)
                 .padding(.leading)
@@ -63,6 +64,8 @@ struct HomeView: View {
         .onAppear {
             viewModel.fetchUser()
         }
+        .navigationBarBackButtonHidden(true)
+        
     }
 }
 

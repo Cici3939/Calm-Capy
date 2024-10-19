@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct MainView: View {
-    @State var selectedTab = 3
+    @State var selectedTab = 0
     
     var body: some View {
         TabView(selection: $selectedTab) {
@@ -20,6 +20,7 @@ struct MainView: View {
                     Text("Home")
                         .foregroundStyle(Color("TextColor"))
                 }
+                .tag(0)
 
             ChatbotView()
                 .tabItem{
@@ -29,6 +30,7 @@ struct MainView: View {
                     Text("Chatbot")
                         .foregroundStyle(Color("TextColor"))
                 }
+                .tag(1)
             
             StatsView()
                 .tabItem{
@@ -38,6 +40,7 @@ struct MainView: View {
                     Text("Stats")
                         .foregroundStyle(Color("TextColor"))
                 }
+                .tag(2)
             
             ProfileView()
                 .tabItem{
@@ -47,8 +50,10 @@ struct MainView: View {
                     Text("Profile")
                         .foregroundStyle(Color("TextColor"))
                 }
+                .tag(3)
         }
         .background(.white)
+        .navigationBarBackButtonHidden(true)
     }
 }
 

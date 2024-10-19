@@ -28,6 +28,8 @@ struct StatsView: View {
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(.leading)
                 .offset(y: 30)
+                .padding(.bottom)
+                .padding(.bottom)
 
             TabView {
                 MoodCountView(viewModel: viewModel)

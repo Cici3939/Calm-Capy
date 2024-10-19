@@ -36,26 +36,10 @@ struct BreatheView: View {
                         .resizable().frame(width: 400, height: 400)
                         .scaleEffect(x: 1.0, y: verticalScale)
                     
-                    Image("CapybaraBodyShadow")
-                        .resizable().frame(width: 400, height: 400)
-                        .offset(y: offsetY)
-                    
-                    Image("CapybaraNose")
-                        .resizable().frame(width: 400, height: 400)
-                        .offset(y: offsetY)
-                    
                     Image("CapybaraFace")
                         .resizable().frame(width: 400, height: 400)
                         .offset(y: offsetY)
-                    
-                    Image("CapybaraEars")
-                        .resizable().frame(width: 400, height: 400)
-                        .offset(y: offsetY)
-                    
-                    Image("CapybaraLeaf")
-                        .resizable().frame(width: 400, height: 400)
-                        .offset(x: -5)
-                        .offset(y: offsetY)
+
                 }
                 .onAppear {
                     if started {

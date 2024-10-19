@@ -21,7 +21,7 @@ struct MoodCalendarView: View {
             Rectangle()
                 .foregroundStyle(Color("BorderColor"))
                 .cornerRadius(10)
-                .frame(width: 370, height: 390)
+                .frame(width: 380, height: 390)
                 .offset(y: 10)
             
             Rectangle()
@@ -54,7 +54,7 @@ struct MoodCalendarView: View {
                 LazyVGrid(columns: columns, spacing: 10) {
                     ForEach(weekDays, id: \.self) { day in
                         Text(day)
-                            .font(.headline)
+                            .font(.system(size: 18))
                             .frame(maxWidth: .infinity)
                             .foregroundStyle(Color("TextColor"))
                             .offset(y: 35)
@@ -150,9 +150,11 @@ struct MoodCalendarView: View {
     }
     
     func colorForMood(_ mood: Mood) -> Color {
-        var maxMood = max(mood.happy, max(mood.sad, max(mood.fearful, max(mood.angry, mood.neutral))))
+        let maxMood = max(mood.happy, max(mood.sad, max(mood.fearful, max(mood.angry, mood.neutral))))
         
         switch maxMood {
+        case 0:
+            return Color("Default")
         case mood.happy:
             return .yellow
         case mood.sad:

@@ -22,7 +22,7 @@ struct CCButton: View {
                     .foregroundStyle(background)
                 
                 Text(title)
-                    .foregroundStyle(Color.white)
+                    .foregroundStyle(Color("Default"))
                     .bold()
             }
         }
@@ -33,6 +33,5 @@ struct CCButton: View {
 #Preview {
     CCButton(title: "Value",
              background: Color("PrimaryColor")) {
-        //Action
     }
 }

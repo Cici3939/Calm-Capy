@@ -16,6 +16,12 @@ class LoginViewViewModel: ObservableObject {
     init() {}
     
     func login() {
+        do {
+                try Auth.auth().signOut()
+            } catch {
+                print("Error signing out before login: \(error.localizedDescription)")
+            }
+        
         guard validate() else {
             return
         }

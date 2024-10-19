@@ -29,8 +29,8 @@ struct ProfileView: View {
     func profile(user: User) -> some View {
         ZStack {
             //Bg pic
-            //Image("Chatbot")
-                //.offset(y: -100)
+            Image("AppIcon")
+                .offset(y: -100)
             Rectangle()
                 .foregroundStyle(Color("SecondaryColor"))
                 .frame(width: 1000, height: 350)

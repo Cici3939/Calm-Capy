@@ -19,7 +19,7 @@ struct LoginView: View {
                                subtitle: "Be calm like a capybara",
                                angle: 15,
                                background: Color("PrimaryColor"))
-                    Image("Chatbot")
+                    Image("Capy Login")
                         .resizable().frame(width: 210, height: 230)
                         .offset(y: 10)
                 }

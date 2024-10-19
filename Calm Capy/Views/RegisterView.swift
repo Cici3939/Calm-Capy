@@ -18,7 +18,7 @@ struct RegisterView: View {
                            angle: -15,
                            background: Color("SecondaryColor"))
                 
-                Image("Chatbot")
+                Image("Capy Register")
                     .resizable().frame(width: 210, height: 230)
                     .offset(y: 20)
             }

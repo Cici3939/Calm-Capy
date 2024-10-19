@@ -18,7 +18,7 @@ struct Mood: Codable {
     var neutral: Int
     var userId: String
     var timestamp: Date
-
+    
     func asDictionary() -> [String: Any] {
         return [
             "happy": happy,
@@ -36,17 +36,17 @@ class MoodViewModel: ObservableObject {
     @Published var moods: [Mood] = []
     
     let timestamp = Calendar.current.date(bySettingHour: 0, minute: 0, second: 0, of: Date(), matchingPolicy: .nextTime, repeatedTimePolicy: .first, direction: .backward)!
-
-
+    
+    
     private let db = Firestore.firestore()
     private var userId: String? {
         Auth.auth().currentUser?.uid
     }
-
+    
     init() {
         fetchMoods()
     }
-
+    
     func fetchMoods() {
         guard let userId = userId else { return }
         
@@ -67,21 +67,25 @@ class MoodViewModel: ObservableObject {
                 }
             }
     }
-
+    
     func updateMood(mood: String) {
         guard let userId = userId else { return }
-        
+
+        let startOfDay = Calendar.current.startOfDay(for: Date())
+
         db.collection("moods")
             .whereField("userId", isEqualTo: userId)
+            .whereField("timestamp", isEqualTo: startOfDay)
+        
             .getDocuments { [weak self] snapshot, error in
                 if let error = error {
-                    print("Error fetching document: \(error)")
+                    print("Error fetching documents: \(error)")
                     return
                 }
-                
-                if let document = snapshot?.documents.first {
+
+                if let documents = snapshot?.documents, !documents.isEmpty {
+                    let document = documents.first!
                     var data = document.data()
-                    data["timestamp"] = Date()
                     
                     switch mood {
                     case "Happy":
@@ -97,7 +101,7 @@ class MoodViewModel: ObservableObject {
                     default:
                         break
                     }
-                    
+
                     document.reference.updateData(data) { error in
                         if let error = error {
                             print("Error updating document: \(error)")
@@ -107,16 +111,26 @@ class MoodViewModel: ObservableObject {
                         }
                     }
                 } else {
-                    let initialMood = Mood(happy: 0, sad: 0, fearful: 0, angry: 0, neutral: 0, userId: userId, timestamp: Date())
-                    self?.db.collection("moods").document().setData(initialMood.asDictionary()) { error in
+                    let initialMood = Mood(
+                        happy: mood == "Happy" ? 1 : 0,
+                        sad: mood == "Sad" ? 1 : 0,
+                        fearful: mood == "Fearful" ? 1 : 0,
+                        angry: mood == "Angry" ? 1 : 0,
+                        neutral: mood == "Neutral" ? 1 : 0,
+                        userId: userId,
+                        timestamp: startOfDay
+                    )
+
+                    self?.db.collection("moods").addDocument(data: initialMood.asDictionary()) { error in
                         if let error = error {
                             print("Error creating document: \(error)")
                         } else {
                             print("Document created successfully!")
-                            self?.updateMood(mood: mood)
+                            self?.fetchMoods()
                         }
                     }
                 }
             }
     }
 }
+

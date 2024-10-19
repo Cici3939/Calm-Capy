@@ -11,8 +11,9 @@ struct MoodCountView: View {
     @ObservedObject var viewModel: MoodViewModel
 
     var body: some View {
-        VStack {
-            
+        let moodCounts = calculateMoodCounts(viewModel: viewModel)
+
+        return VStack {
             ZStack {
                 Rectangle()
                     .cornerRadius(10)
@@ -21,105 +22,19 @@ struct MoodCountView: View {
                 
                 if viewModel.moods.isEmpty {
                     VStack(alignment: .leading) {
-                        HStack {
-                            Circle()
-                                .frame(width: 30, height: 30)
-                                .foregroundStyle(.yellow)
-                                .padding(.trailing)
-                            Text("Happy: 0")
-                                .foregroundStyle(Color("TextColor"))
-                        }
-                        
-                        HStack {
-                            Circle()
-                                .frame(width: 30, height: 30)
-                                .foregroundStyle(.blue)
-                                .padding(.trailing)
-                            Text("Sad: 0")
-                                .foregroundStyle(Color("TextColor"))
-                        }
-                        
-                        HStack {
-                            Circle()
-                                .frame(width: 30, height: 30)
-                                .foregroundStyle(.purple)
-                                .padding(.trailing)
-                            Text("Fearful: 0")
-                                .foregroundStyle(Color("TextColor"))
-                        }
-                        
-                        HStack {
-                            Circle()
-                                .frame(width: 30, height: 30)
-                                .foregroundStyle(.red)
-                                .padding(.trailing)
-                            Text("Angry: 0")
-                                .foregroundStyle(Color("TextColor"))
-                        }
-
-                        HStack {
-                            Circle()
-                                .frame(width: 30, height: 30)
-                                .foregroundStyle(.green)
-                                .padding(.trailing)
-                            Text("Neutral: 0")
-                                .foregroundStyle(Color("TextColor"))
-                        }
-
+                        MoodRowView(color: .yellow, mood: "Happy", count: 0)
+                        MoodRowView(color: .blue, mood: "Sad", count: 0)
+                        MoodRowView(color: .purple, mood: "Fearful", count: 0)
+                        MoodRowView(color: .red, mood: "Angry", count: 0)
+                        MoodRowView(color: .green, mood: "Neutral", count: 0)
                     }
-                }
-                else {
-                    ForEach(viewModel.moods, id: \.userId) { mood in
-                        VStack(alignment: .leading) {
-                            HStack {
-                                Circle()
-                                    .frame(width: 30, height: 30)
-                                    .foregroundStyle(.yellow)
-                                    .padding(.trailing)
-                                Text("Happy: \(mood.happy)")
-                                    .foregroundStyle(Color("TextColor"))
-                            }
-                            
-                            HStack {
-                                Circle()
-                                    .frame(width: 30, height: 30)
-                                    .foregroundStyle(.blue)
-                                    .padding(.trailing)
-                                Text("Sad: \(mood.sad)")
-                                    .foregroundStyle(Color("TextColor"))
-                            }
-
-                            
-                            HStack {
-                                Circle()
-                                    .frame(width: 30, height: 30)
-                                    .foregroundStyle(.purple)
-                                    .padding(.trailing)
-                                Text("Fearful: \(mood.fearful)")
-                                    .foregroundStyle(Color("TextColor"))
-                            }
-
-                            
-                            HStack {
-                                Circle()
-                                    .frame(width: 30, height: 30)
-                                    .foregroundStyle(.red)
-                                    .padding(.trailing)
-                                Text("Angry: \(mood.angry)")
-                                    .foregroundStyle(Color("TextColor"))
-                            }
-
-                            HStack {
-                                Circle()
-                                    .frame(width: 30, height: 30)
-                                    .foregroundStyle(.green)
-                                    .padding(.trailing)
-                                Text("Neutral: \(mood.neutral)")
-                                    .foregroundStyle(Color("TextColor"))
-                            }
-
-                        }
-                        
+                } else {
+                    VStack(alignment: .leading) {
+                        MoodRowView(color: .yellow, mood: "Happy", count: moodCounts["Happy"] ?? 0)
+                        MoodRowView(color: .blue, mood: "Sad", count: moodCounts["Sad"] ?? 0)
+                        MoodRowView(color: .purple, mood: "Fearful", count: moodCounts["Fearful"] ?? 0)
+                        MoodRowView(color: .red, mood: "Angry", count: moodCounts["Angry"] ?? 0)
+                        MoodRowView(color: .green, mood: "Neutral", count: moodCounts["Neutral"] ?? 0)
                     }
                 }
             }
@@ -130,6 +45,42 @@ struct MoodCountView: View {
                 .foregroundStyle(Color("TextColor"))
                 .font(.system(size: 10))
                 .offset(y: -5)
+        }
+    }
+
+    private func calculateMoodCounts(viewModel: MoodViewModel) -> [String: Int] {
+        let startOfMonth = Calendar.current.date(from: Calendar.current.dateComponents([.year, .month], from: Date()))!
+        let endOfMonth = Calendar.current.date(byAdding: DateComponents(month: 1, day: 0, hour: -1), to: startOfMonth)!
+
+        var moodCounts: [String: Int] = ["Happy": 0, "Sad": 0, "Fearful": 0, "Angry": 0, "Neutral": 0]
+
+        let filteredMoods = viewModel.moods.filter { $0.timestamp >= startOfMonth && $0.timestamp <= endOfMonth }
+
+        for mood in filteredMoods {
+            moodCounts["Happy"]! += mood.happy
+            moodCounts["Sad"]! += mood.sad
+            moodCounts["Fearful"]! += mood.fearful
+            moodCounts["Angry"]! += mood.angry
+            moodCounts["Neutral"]! += mood.neutral
+        }
+
+        return moodCounts
+    }
+}
+
+struct MoodRowView: View {
+    var color: Color
+    var mood: String
+    var count: Int
+
+    var body: some View {
+        HStack {
+            Circle()
+                .frame(width: 30, height: 30)
+                .foregroundStyle(color)
+                .padding(.trailing)
+            Text("\(mood): \(count)")
+                .foregroundStyle(Color("TextColor"))
         }
     }
 }

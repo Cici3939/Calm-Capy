@@ -31,7 +31,7 @@ struct JournalEntry: Identifiable, Codable {
 
 class JournalViewModel: ObservableObject {
     @Published var entries: [JournalEntry] = []
-
+    
     private let db = Firestore.firestore()
     private var userId: String? {
         Auth.auth().currentUser?.uid
@@ -40,7 +40,7 @@ class JournalViewModel: ObservableObject {
     init() {
         fetchEntries()
     }
-
+    
     func fetchEntries() {
         guard let userId = userId else { return }
         
@@ -57,7 +57,7 @@ class JournalViewModel: ObservableObject {
                 }
             }
     }
-
+    
     func addNewEntry(title: String, content: String, date: Date) {
         guard let userId = userId else { return }
         
@@ -76,7 +76,7 @@ class JournalViewModel: ObservableObject {
             }
         }
     }
-
+    
     func updateEntry(entry: JournalEntry) {
         guard let entryId = entry.id else { return }
         
@@ -92,13 +92,15 @@ class JournalViewModel: ObservableObject {
     
     func deleteEntry(entryId: String) {
         guard let userId = userId else { return }
-
+        
         db.collection("journalEntries").document(entryId).delete { [weak self] error in
             if let error = error {
                 print("Error deleting document: \(error)")
             } else {
                 print("Document deleted successfully!")
-                self?.fetchEntries()
+                if let index = self?.entries.firstIndex(where: { $0.id == entryId }) {
+                    self?.entries.remove(at: index)
+                }
             }
         }
     }

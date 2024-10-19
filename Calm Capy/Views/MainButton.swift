@@ -1,3 +1,10 @@
+//
+//  CCButton.swift
+//  Calm Capy
+//
+//  Created by Cici Xing on 7/25/24.
+//
+
 import SwiftUI
 
 struct MainButton<Destination: View>: View {

@@ -12,7 +12,7 @@ struct JournalCard: View {
     let content: String
     let date: Date
     @State private var isExpanded = false
-    @ObservedObject var viewModel: JournalViewModel
+    @ObservedObject var viewModel = JournalViewModel()
     @StateObject var moodViewModel = MoodViewModel()
     let entryId: String
     let userId: String
@@ -69,6 +69,7 @@ struct JournalCard: View {
                         message: Text("Are you sure you want to delete this entry? This action can not be undone."),
                         primaryButton: .destructive(Text("Delete")) {
                             viewModel.deleteEntry(entryId: entryId)
+                            viewModel.fetchEntries()
                         },
                         secondaryButton: .cancel()
                     )
@@ -87,6 +88,8 @@ struct JournalCard: View {
         let maxMood = max(mood.happy, max(mood.sad, max(mood.fearful, max(mood.angry, mood.neutral))))
         
         switch maxMood {
+        case 0:
+            return Color("Default")
         case mood.happy:
             return .yellow
         case mood.sad:
