@@ -6,6 +6,62 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		0FF05B8E301AC593006015E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0FF05B81301AC593006015E7 /* Assets.xcassets */; };
+		0FF05B8F301AC593006015E7 /* Calm-Capy-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0FF05B84301AC593006015E7 /* Calm-Capy-Info.plist */; };
+		0FF05B90301AC593006015E7 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FF05B89301AC593006015E7 /* Launch Screen.storyboard */; };
+		0FF05B91301AC593006015E7 /* MoodClassifier.mlproj in Resources */ = {isa = PBXBuildFile; fileRef = 0FF05B8A301AC593006015E7 /* MoodClassifier.mlproj */; };
+		0FF05B92301AC593006015E7 /* AudioClassifierViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF05B5A301AC593006015E7 /* AudioClassifierViewModel.swift */; };
+		0FF05B93301AC593006015E7 /* ContentViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF05B5B301AC593006015E7 /* ContentViewViewModel.swift */; };
+		0FF05B94301AC593006015E7 /* JournalViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF05B5C301AC593006015E7 /* JournalViewViewModel.swift */; };
+		0FF05B95301AC593006015E7 /* LoginViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF05B5D301AC593006015E7 /* LoginViewViewModel.swift */; };
+		0FF05B96301AC593006015E7 /* MoodViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF05B5E301AC593006015E7 /* MoodViewModel.swift */; };
+		0FF05B97301AC593006015E7 /* ProfileViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF05B5F301AC593006015E7 /* ProfileViewViewModel.swift */; };
+		0FF05B98301AC593006015E7 /* RegisterViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF05B60301AC593006015E7 /* RegisterViewViewModel.swift */; };
+		0FF05B99301AC593006015E7 /* AddJournalEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF05B62301AC593006015E7 /* AddJournalEntryView.swift */; };
+		0FF05B9A301AC593006015E7 /* EditJournalEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF05B63301AC593006015E7 /* EditJournalEntryView.swift */; };
+		0FF05B9B301AC593006015E7 /* JournalCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF05B64301AC593006015E7 /* JournalCard.swift */; };
+		0FF05B9C301AC593006015E7 /* JournalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF05B65301AC593006015E7 /* JournalView.swift */; };
+		0FF05B9D301AC593006015E7 /* AngryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF05B67301AC593006015E7 /* AngryView.swift */; };
+		0FF05B9E301AC593006015E7 /* FearfulView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF05B68301AC593006015E7 /* FearfulView.swift */; };
+		0FF05B9F301AC593006015E7 /* HappyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF05B69301AC593006015E7 /* HappyView.swift */; };
+		0FF05BA0301AC593006015E7 /* MoodClassifierView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF05B6A301AC593006015E7 /* MoodClassifierView.swift */; };
+		0FF05BA1301AC593006015E7 /* MoodRecorderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF05B6B301AC593006015E7 /* MoodRecorderView.swift */; };
+		0FF05BA2301AC593006015E7 /* NeutralView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF05B6C301AC593006015E7 /* NeutralView.swift */; };
+		0FF05BA3301AC593006015E7 /* SadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF05B6D301AC593006015E7 /* SadView.swift */; };
+		0FF05BA4301AC593006015E7 /* MoodCalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF05B6F301AC593006015E7 /* MoodCalendarView.swift */; };
+		0FF05BA5301AC593006015E7 /* MoodChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF05B70301AC593006015E7 /* MoodChartView.swift */; };
+		0FF05BA6301AC593006015E7 /* MoodCountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF05B71301AC593006015E7 /* MoodCountView.swift */; };
+		0FF05BA7301AC593006015E7 /* StatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF05B72301AC593006015E7 /* StatsView.swift */; };
+		0FF05BA8301AC593006015E7 /* BreatheView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF05B74301AC593006015E7 /* BreatheView.swift */; };
+		0FF05BA9301AC593006015E7 /* CCButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF05B75301AC593006015E7 /* CCButton.swift */; };
+		0FF05BAA301AC593006015E7 /* ChatbotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF05B76301AC593006015E7 /* ChatbotView.swift */; };
+		0FF05BAB301AC593006015E7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF05B77301AC593006015E7 /* ContentView.swift */; };
+		0FF05BAC301AC593006015E7 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF05B78301AC593006015E7 /* HeaderView.swift */; };
+		0FF05BAD301AC593006015E7 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF05B79301AC593006015E7 /* HomeView.swift */; };
+		0FF05BAE301AC593006015E7 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF05B7A301AC593006015E7 /* LoginView.swift */; };
+		0FF05BAF301AC593006015E7 /* MainButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF05B7B301AC593006015E7 /* MainButton.swift */; };
+		0FF05BB0301AC593006015E7 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF05B7C301AC593006015E7 /* MainView.swift */; };
+		0FF05BB1301AC593006015E7 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF05B7D301AC593006015E7 /* ProfileView.swift */; };
+		0FF05BB2301AC593006015E7 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF05B7E301AC593006015E7 /* RegisterView.swift */; };
+		0FF05BB3301AC593006015E7 /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF05B80301AC593006015E7 /* APIKey.swift */; };
+		0FF05BB4301AC593006015E7 /* Calm_Capy_2026App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF05B82301AC593006015E7 /* Calm_Capy_2026App.swift */; };
+		0FF05BB5301AC593006015E7 /* Calm_CapyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF05B83301AC593006015E7 /* Calm_CapyApp.swift */; };
+		0FF05BB6301AC593006015E7 /* Chatbot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF05B85301AC593006015E7 /* Chatbot.swift */; };
+		0FF05BB7301AC593006015E7 /* ChatBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF05B86301AC593006015E7 /* ChatBubble.swift */; };
+		0FF05BB8301AC593006015E7 /* ChatBubbleShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF05B87301AC593006015E7 /* ChatBubbleShape.swift */; };
+		0FF05BB9301AC593006015E7 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF05B88301AC593006015E7 /* Extensions.swift */; };
+		0FF05BBA301AC593006015E7 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF05B8B301AC593006015E7 /* User.swift */; };
+		0FF05BBB301AC593006015E7 /* ViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF05B8C301AC593006015E7 /* ViewExtensions.swift */; };
+		0FF05BBD301B0F01006015E7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0FF05BBC301B0F01006015E7 /* GoogleService-Info.plist */; };
+		0FF05BC0301B2139006015E7 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 0FF05BBF301B2139006015E7 /* FirebaseAnalytics */; };
+		0FF05BC2301B2139006015E7 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 0FF05BC1301B2139006015E7 /* FirebaseAuth */; };
+		0FF05BC4301B2139006015E7 /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = 0FF05BC3301B2139006015E7 /* FirebaseCore */; };
+		0FF05BC6301B2139006015E7 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 0FF05BC5301B2139006015E7 /* FirebaseFirestore */; };
+		0FF05BC8301B2139006015E7 /* FirebaseFirestoreCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 0FF05BC7301B2139006015E7 /* FirebaseFirestoreCombine-Community */; };
+		0FF05BCA301B2139006015E7 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 0FF05BC9301B2139006015E7 /* FirebaseStorage */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		0F75ADE230147747007D18DB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -27,14 +83,56 @@
 		0F75ADD430147745007D18DB /* Calm Capy 2026.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Calm Capy 2026.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F75ADE130147747007D18DB /* Calm Capy 2026Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Calm Capy 2026Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F75ADEB30147747007D18DB /* Calm Capy 2026UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Calm Capy 2026UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0FF05B5A301AC593006015E7 /* AudioClassifierViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioClassifierViewModel.swift; sourceTree = "<group>"; };
+		0FF05B5B301AC593006015E7 /* ContentViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewViewModel.swift; sourceTree = "<group>"; };
+		0FF05B5C301AC593006015E7 /* JournalViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalViewViewModel.swift; sourceTree = "<group>"; };
+		0FF05B5D301AC593006015E7 /* LoginViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewViewModel.swift; sourceTree = "<group>"; };
+		0FF05B5E301AC593006015E7 /* MoodViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodViewModel.swift; sourceTree = "<group>"; };
+		0FF05B5F301AC593006015E7 /* ProfileViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewViewModel.swift; sourceTree = "<group>"; };
+		0FF05B60301AC593006015E7 /* RegisterViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewViewModel.swift; sourceTree = "<group>"; };
+		0FF05B62301AC593006015E7 /* AddJournalEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddJournalEntryView.swift; sourceTree = "<group>"; };
+		0FF05B63301AC593006015E7 /* EditJournalEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditJournalEntryView.swift; sourceTree = "<group>"; };
+		0FF05B64301AC593006015E7 /* JournalCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalCard.swift; sourceTree = "<group>"; };
+		0FF05B65301AC593006015E7 /* JournalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalView.swift; sourceTree = "<group>"; };
+		0FF05B67301AC593006015E7 /* AngryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AngryView.swift; sourceTree = "<group>"; };
+		0FF05B68301AC593006015E7 /* FearfulView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FearfulView.swift; sourceTree = "<group>"; };
+		0FF05B69301AC593006015E7 /* HappyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HappyView.swift; sourceTree = "<group>"; };
+		0FF05B6A301AC593006015E7 /* MoodClassifierView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodClassifierView.swift; sourceTree = "<group>"; };
+		0FF05B6B301AC593006015E7 /* MoodRecorderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodRecorderView.swift; sourceTree = "<group>"; };
+		0FF05B6C301AC593006015E7 /* NeutralView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeutralView.swift; sourceTree = "<group>"; };
+		0FF05B6D301AC593006015E7 /* SadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SadView.swift; sourceTree = "<group>"; };
+		0FF05B6F301AC593006015E7 /* MoodCalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodCalendarView.swift; sourceTree = "<group>"; };
+		0FF05B70301AC593006015E7 /* MoodChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodChartView.swift; sourceTree = "<group>"; };
+		0FF05B71301AC593006015E7 /* MoodCountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodCountView.swift; sourceTree = "<group>"; };
+		0FF05B72301AC593006015E7 /* StatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsView.swift; sourceTree = "<group>"; };
+		0FF05B74301AC593006015E7 /* BreatheView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreatheView.swift; sourceTree = "<group>"; };
+		0FF05B75301AC593006015E7 /* CCButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCButton.swift; sourceTree = "<group>"; };
+		0FF05B76301AC593006015E7 /* ChatbotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatbotView.swift; sourceTree = "<group>"; };
+		0FF05B77301AC593006015E7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		0FF05B78301AC593006015E7 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		0FF05B79301AC593006015E7 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		0FF05B7A301AC593006015E7 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		0FF05B7B301AC593006015E7 /* MainButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainButton.swift; sourceTree = "<group>"; };
+		0FF05B7C301AC593006015E7 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		0FF05B7D301AC593006015E7 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		0FF05B7E301AC593006015E7 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		0FF05B80301AC593006015E7 /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
+		0FF05B81301AC593006015E7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0FF05B82301AC593006015E7 /* Calm_Capy_2026App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calm_Capy_2026App.swift; sourceTree = "<group>"; };
+		0FF05B83301AC593006015E7 /* Calm_CapyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calm_CapyApp.swift; sourceTree = "<group>"; };
+		0FF05B84301AC593006015E7 /* Calm-Capy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Calm-Capy-Info.plist"; sourceTree = "<group>"; };
+		0FF05B85301AC593006015E7 /* Chatbot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chatbot.swift; sourceTree = "<group>"; };
+		0FF05B86301AC593006015E7 /* ChatBubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBubble.swift; sourceTree = "<group>"; };
+		0FF05B87301AC593006015E7 /* ChatBubbleShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBubbleShape.swift; sourceTree = "<group>"; };
+		0FF05B88301AC593006015E7 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		0FF05B89301AC593006015E7 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		0FF05B8A301AC593006015E7 /* MoodClassifier.mlproj */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = MoodClassifier.mlproj; sourceTree = "<group>"; };
+		0FF05B8B301AC593006015E7 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		0FF05B8C301AC593006015E7 /* ViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtensions.swift; sourceTree = "<group>"; };
+		0FF05BBC301B0F01006015E7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		0F75ADD630147745007D18DB /* Calm Capy 2026 */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = "Calm Capy 2026";
-			sourceTree = "<group>";
-		};
 		0F75ADE430147747007D18DB /* Calm Capy 2026Tests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = "Calm Capy 2026Tests";
@@ -52,6 +150,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0FF05BC0301B2139006015E7 /* FirebaseAnalytics in Frameworks */,
+				0FF05BC6301B2139006015E7 /* FirebaseFirestore in Frameworks */,
+				0FF05BC4301B2139006015E7 /* FirebaseCore in Frameworks */,
+				0FF05BC8301B2139006015E7 /* FirebaseFirestoreCombine-Community in Frameworks */,
+				0FF05BC2301B2139006015E7 /* FirebaseAuth in Frameworks */,
+				0FF05BCA301B2139006015E7 /* FirebaseStorage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,7 +179,7 @@
 		0F75ADCB30147745007D18DB = {
 			isa = PBXGroup;
 			children = (
-				0F75ADD630147745007D18DB /* Calm Capy 2026 */,
+				0FF05B8D301AC593006015E7 /* Calm Capy 2026 */,
 				0F75ADE430147747007D18DB /* Calm Capy 2026Tests */,
 				0F75ADEE30147747007D18DB /* Calm Capy 2026UITests */,
 				0F75ADD530147745007D18DB /* Products */,
@@ -90,6 +194,100 @@
 				0F75ADEB30147747007D18DB /* Calm Capy 2026UITests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		0FF05B61301AC593006015E7 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				0FF05B5B301AC593006015E7 /* ContentViewViewModel.swift */,
+				0FF05B5A301AC593006015E7 /* AudioClassifierViewModel.swift */,
+				0FF05B5C301AC593006015E7 /* JournalViewViewModel.swift */,
+				0FF05B5D301AC593006015E7 /* LoginViewViewModel.swift */,
+				0FF05B5E301AC593006015E7 /* MoodViewModel.swift */,
+				0FF05B5F301AC593006015E7 /* ProfileViewViewModel.swift */,
+				0FF05B60301AC593006015E7 /* RegisterViewViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		0FF05B66301AC593006015E7 /* Journal */ = {
+			isa = PBXGroup;
+			children = (
+				0FF05B62301AC593006015E7 /* AddJournalEntryView.swift */,
+				0FF05B63301AC593006015E7 /* EditJournalEntryView.swift */,
+				0FF05B64301AC593006015E7 /* JournalCard.swift */,
+				0FF05B65301AC593006015E7 /* JournalView.swift */,
+			);
+			path = Journal;
+			sourceTree = "<group>";
+		};
+		0FF05B6E301AC593006015E7 /* MoodViews */ = {
+			isa = PBXGroup;
+			children = (
+				0FF05B67301AC593006015E7 /* AngryView.swift */,
+				0FF05B68301AC593006015E7 /* FearfulView.swift */,
+				0FF05B69301AC593006015E7 /* HappyView.swift */,
+				0FF05B6A301AC593006015E7 /* MoodClassifierView.swift */,
+				0FF05B6B301AC593006015E7 /* MoodRecorderView.swift */,
+				0FF05B6C301AC593006015E7 /* NeutralView.swift */,
+				0FF05B6D301AC593006015E7 /* SadView.swift */,
+			);
+			path = MoodViews;
+			sourceTree = "<group>";
+		};
+		0FF05B73301AC593006015E7 /* Stats */ = {
+			isa = PBXGroup;
+			children = (
+				0FF05B6F301AC593006015E7 /* MoodCalendarView.swift */,
+				0FF05B70301AC593006015E7 /* MoodChartView.swift */,
+				0FF05B71301AC593006015E7 /* MoodCountView.swift */,
+				0FF05B72301AC593006015E7 /* StatsView.swift */,
+			);
+			path = Stats;
+			sourceTree = "<group>";
+		};
+		0FF05B7F301AC593006015E7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0FF05B77301AC593006015E7 /* ContentView.swift */,
+				0FF05B79301AC593006015E7 /* HomeView.swift */,
+				0FF05B74301AC593006015E7 /* BreatheView.swift */,
+				0FF05B76301AC593006015E7 /* ChatbotView.swift */,
+				0FF05B7C301AC593006015E7 /* MainView.swift */,
+				0FF05B6E301AC593006015E7 /* MoodViews */,
+				0FF05B66301AC593006015E7 /* Journal */,
+				0FF05B73301AC593006015E7 /* Stats */,
+				0FF05B7E301AC593006015E7 /* RegisterView.swift */,
+				0FF05B7A301AC593006015E7 /* LoginView.swift */,
+				0FF05B78301AC593006015E7 /* HeaderView.swift */,
+				0FF05B7D301AC593006015E7 /* ProfileView.swift */,
+				0FF05B7B301AC593006015E7 /* MainButton.swift */,
+				0FF05B75301AC593006015E7 /* CCButton.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0FF05B8D301AC593006015E7 /* Calm Capy 2026 */ = {
+			isa = PBXGroup;
+			children = (
+				0FF05B8A301AC593006015E7 /* MoodClassifier.mlproj */,
+				0FF05B84301AC593006015E7 /* Calm-Capy-Info.plist */,
+				0FF05BBC301B0F01006015E7 /* GoogleService-Info.plist */,
+				0FF05B82301AC593006015E7 /* Calm_Capy_2026App.swift */,
+				0FF05B83301AC593006015E7 /* Calm_CapyApp.swift */,
+				0FF05B80301AC593006015E7 /* APIKey.swift */,
+				0FF05B7F301AC593006015E7 /* Views */,
+				0FF05B61301AC593006015E7 /* ViewModels */,
+				0FF05B85301AC593006015E7 /* Chatbot.swift */,
+				0FF05B86301AC593006015E7 /* ChatBubble.swift */,
+				0FF05B87301AC593006015E7 /* ChatBubbleShape.swift */,
+				0FF05B88301AC593006015E7 /* Extensions.swift */,
+				0FF05B8B301AC593006015E7 /* User.swift */,
+				0FF05B8C301AC593006015E7 /* ViewExtensions.swift */,
+				0FF05B89301AC593006015E7 /* Launch Screen.storyboard */,
+				0FF05B81301AC593006015E7 /* Assets.xcassets */,
+			);
+			path = "Calm Capy 2026";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -107,11 +305,14 @@
 			);
 			dependencies = (
 			);
-			fileSystemSynchronizedGroups = (
-				0F75ADD630147745007D18DB /* Calm Capy 2026 */,
-			);
 			name = "Calm Capy 2026";
 			packageProductDependencies = (
+				0FF05BBF301B2139006015E7 /* FirebaseAnalytics */,
+				0FF05BC1301B2139006015E7 /* FirebaseAuth */,
+				0FF05BC3301B2139006015E7 /* FirebaseCore */,
+				0FF05BC5301B2139006015E7 /* FirebaseFirestore */,
+				0FF05BC7301B2139006015E7 /* FirebaseFirestoreCombine-Community */,
+				0FF05BC9301B2139006015E7 /* FirebaseStorage */,
 			);
 			productName = "Calm Capy 2026";
 			productReference = 0F75ADD430147745007D18DB /* Calm Capy 2026.app */;
@@ -195,6 +396,9 @@
 			);
 			mainGroup = 0F75ADCB30147745007D18DB;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				0FF05BBE301B2139006015E7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 0F75ADD530147745007D18DB /* Products */;
 			projectDirPath = "";
@@ -212,6 +416,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0FF05B8E301AC593006015E7 /* Assets.xcassets in Resources */,
+				0FF05B8F301AC593006015E7 /* Calm-Capy-Info.plist in Resources */,
+				0FF05BBD301B0F01006015E7 /* GoogleService-Info.plist in Resources */,
+				0FF05B90301AC593006015E7 /* Launch Screen.storyboard in Resources */,
+				0FF05B91301AC593006015E7 /* MoodClassifier.mlproj in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,6 +445,48 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0FF05B92301AC593006015E7 /* AudioClassifierViewModel.swift in Sources */,
+				0FF05B93301AC593006015E7 /* ContentViewViewModel.swift in Sources */,
+				0FF05B94301AC593006015E7 /* JournalViewViewModel.swift in Sources */,
+				0FF05B95301AC593006015E7 /* LoginViewViewModel.swift in Sources */,
+				0FF05B96301AC593006015E7 /* MoodViewModel.swift in Sources */,
+				0FF05B97301AC593006015E7 /* ProfileViewViewModel.swift in Sources */,
+				0FF05B98301AC593006015E7 /* RegisterViewViewModel.swift in Sources */,
+				0FF05B99301AC593006015E7 /* AddJournalEntryView.swift in Sources */,
+				0FF05B9A301AC593006015E7 /* EditJournalEntryView.swift in Sources */,
+				0FF05B9B301AC593006015E7 /* JournalCard.swift in Sources */,
+				0FF05B9C301AC593006015E7 /* JournalView.swift in Sources */,
+				0FF05B9D301AC593006015E7 /* AngryView.swift in Sources */,
+				0FF05B9E301AC593006015E7 /* FearfulView.swift in Sources */,
+				0FF05B9F301AC593006015E7 /* HappyView.swift in Sources */,
+				0FF05BA0301AC593006015E7 /* MoodClassifierView.swift in Sources */,
+				0FF05BA1301AC593006015E7 /* MoodRecorderView.swift in Sources */,
+				0FF05BA2301AC593006015E7 /* NeutralView.swift in Sources */,
+				0FF05BA3301AC593006015E7 /* SadView.swift in Sources */,
+				0FF05BA4301AC593006015E7 /* MoodCalendarView.swift in Sources */,
+				0FF05BA5301AC593006015E7 /* MoodChartView.swift in Sources */,
+				0FF05BA6301AC593006015E7 /* MoodCountView.swift in Sources */,
+				0FF05BA7301AC593006015E7 /* StatsView.swift in Sources */,
+				0FF05BA8301AC593006015E7 /* BreatheView.swift in Sources */,
+				0FF05BA9301AC593006015E7 /* CCButton.swift in Sources */,
+				0FF05BAA301AC593006015E7 /* ChatbotView.swift in Sources */,
+				0FF05BAB301AC593006015E7 /* ContentView.swift in Sources */,
+				0FF05BAC301AC593006015E7 /* HeaderView.swift in Sources */,
+				0FF05BAD301AC593006015E7 /* HomeView.swift in Sources */,
+				0FF05BAE301AC593006015E7 /* LoginView.swift in Sources */,
+				0FF05BAF301AC593006015E7 /* MainButton.swift in Sources */,
+				0FF05BB0301AC593006015E7 /* MainView.swift in Sources */,
+				0FF05BB1301AC593006015E7 /* ProfileView.swift in Sources */,
+				0FF05BB2301AC593006015E7 /* RegisterView.swift in Sources */,
+				0FF05BB3301AC593006015E7 /* APIKey.swift in Sources */,
+				0FF05BB4301AC593006015E7 /* Calm_Capy_2026App.swift in Sources */,
+				0FF05BB5301AC593006015E7 /* Calm_CapyApp.swift in Sources */,
+				0FF05BB6301AC593006015E7 /* Chatbot.swift in Sources */,
+				0FF05BB7301AC593006015E7 /* ChatBubble.swift in Sources */,
+				0FF05BB8301AC593006015E7 /* ChatBubbleShape.swift in Sources */,
+				0FF05BB9301AC593006015E7 /* Extensions.swift in Sources */,
+				0FF05BBA301AC593006015E7 /* User.swift in Sources */,
+				0FF05BBB301AC593006015E7 /* ViewExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -570,6 +821,50 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		0FF05BBE301B2139006015E7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 12.17.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0FF05BBF301B2139006015E7 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0FF05BBE301B2139006015E7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		0FF05BC1301B2139006015E7 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0FF05BBE301B2139006015E7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		0FF05BC3301B2139006015E7 /* FirebaseCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0FF05BBE301B2139006015E7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCore;
+		};
+		0FF05BC5301B2139006015E7 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0FF05BBE301B2139006015E7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		0FF05BC7301B2139006015E7 /* FirebaseFirestoreCombine-Community */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0FF05BBE301B2139006015E7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseFirestoreCombine-Community";
+		};
+		0FF05BC9301B2139006015E7 /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0FF05BBE301B2139006015E7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 0F75ADCC30147745007D18DB /* Project object */;
 }
