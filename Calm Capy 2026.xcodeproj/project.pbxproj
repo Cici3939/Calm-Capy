@@ -61,6 +61,8 @@
 		0FF05BC8301B2139006015E7 /* FirebaseFirestoreCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 0FF05BC7301B2139006015E7 /* FirebaseFirestoreCombine-Community */; };
 		0FF05BCA301B2139006015E7 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 0FF05BC9301B2139006015E7 /* FirebaseStorage */; };
 		0FF05BCE301C1FBD006015E7 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 0FF05BCD301C1FB7006015E7 /* .gitignore */; };
+		0FF05BD1301C20E6006015E7 /* FirebaseAI in Frameworks */ = {isa = PBXBuildFile; productRef = 0FF05BD0301C20E6006015E7 /* FirebaseAI */; };
+		0FF05BD3301C20E6006015E7 /* FirebaseAILogic in Frameworks */ = {isa = PBXBuildFile; productRef = 0FF05BD2301C20E6006015E7 /* FirebaseAILogic */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -152,6 +154,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0FF05BD3301C20E6006015E7 /* FirebaseAILogic in Frameworks */,
+				0FF05BD1301C20E6006015E7 /* FirebaseAI in Frameworks */,
 				0FF05BC0301B2139006015E7 /* FirebaseAnalytics in Frameworks */,
 				0FF05BC6301B2139006015E7 /* FirebaseFirestore in Frameworks */,
 				0FF05BC4301B2139006015E7 /* FirebaseCore in Frameworks */,
@@ -184,6 +188,7 @@
 				0FF05B8D301AC593006015E7 /* Calm Capy 2026 */,
 				0F75ADE430147747007D18DB /* Calm Capy 2026Tests */,
 				0F75ADEE30147747007D18DB /* Calm Capy 2026UITests */,
+				0FF05BCF301C20E6006015E7 /* Frameworks */,
 				0F75ADD530147745007D18DB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -293,6 +298,13 @@
 			path = "Calm Capy 2026";
 			sourceTree = "<group>";
 		};
+		0FF05BCF301C20E6006015E7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -316,6 +328,8 @@
 				0FF05BC5301B2139006015E7 /* FirebaseFirestore */,
 				0FF05BC7301B2139006015E7 /* FirebaseFirestoreCombine-Community */,
 				0FF05BC9301B2139006015E7 /* FirebaseStorage */,
+				0FF05BD0301C20E6006015E7 /* FirebaseAI */,
+				0FF05BD2301C20E6006015E7 /* FirebaseAILogic */,
 			);
 			productName = "Calm Capy 2026";
 			productReference = 0F75ADD430147745007D18DB /* Calm Capy 2026.app */;
@@ -655,8 +669,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -665,6 +678,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "Cici-Xing.Calm-Capy-2026";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -686,8 +702,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -696,6 +711,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "Cici-Xing.Calm-Capy-2026";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -867,6 +885,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 0FF05BBE301B2139006015E7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseStorage;
+		};
+		0FF05BD0301C20E6006015E7 /* FirebaseAI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0FF05BBE301B2139006015E7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAI;
+		};
+		0FF05BD2301C20E6006015E7 /* FirebaseAILogic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0FF05BBE301B2139006015E7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAILogic;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
