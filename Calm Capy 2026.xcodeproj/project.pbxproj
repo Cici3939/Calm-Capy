@@ -60,6 +60,7 @@
 		0FF05BC6301B2139006015E7 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 0FF05BC5301B2139006015E7 /* FirebaseFirestore */; };
 		0FF05BC8301B2139006015E7 /* FirebaseFirestoreCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 0FF05BC7301B2139006015E7 /* FirebaseFirestoreCombine-Community */; };
 		0FF05BCA301B2139006015E7 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 0FF05BC9301B2139006015E7 /* FirebaseStorage */; };
+		0FF05BCE301C1FBD006015E7 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 0FF05BCD301C1FB7006015E7 /* .gitignore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -130,6 +131,7 @@
 		0FF05B8B301AC593006015E7 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		0FF05B8C301AC593006015E7 /* ViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtensions.swift; sourceTree = "<group>"; };
 		0FF05BBC301B0F01006015E7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		0FF05BCD301C1FB7006015E7 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -270,6 +272,7 @@
 		0FF05B8D301AC593006015E7 /* Calm Capy 2026 */ = {
 			isa = PBXGroup;
 			children = (
+				0FF05BCD301C1FB7006015E7 /* .gitignore */,
 				0FF05B8A301AC593006015E7 /* MoodClassifier.mlproj */,
 				0FF05B84301AC593006015E7 /* Calm-Capy-Info.plist */,
 				0FF05BBC301B0F01006015E7 /* GoogleService-Info.plist */,
@@ -420,6 +423,7 @@
 				0FF05B8F301AC593006015E7 /* Calm-Capy-Info.plist in Resources */,
 				0FF05BBD301B0F01006015E7 /* GoogleService-Info.plist in Resources */,
 				0FF05B90301AC593006015E7 /* Launch Screen.storyboard in Resources */,
+				0FF05BCE301C1FBD006015E7 /* .gitignore in Resources */,
 				0FF05B91301AC593006015E7 /* MoodClassifier.mlproj in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
