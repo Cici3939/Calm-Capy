@@ -7,7 +7,8 @@
 
 import Foundation
 import SwiftUI
-import GoogleGenerativeAI
+import FirebaseAI
+import FirebaseAILogic
 
 enum ChatRole {
     case user
@@ -35,7 +36,17 @@ class Chatbot {
             history = messages.map {
                 ModelContent(role: $0.role == .user ? "user" : "model", parts: $0.message)
             }
-            chat = GenerativeModel(name: "gemini-1.5-flash", apiKey: APIKey.default, systemInstruction: "You are a mental health expert who specializes in mental illnesses Your name is Capy. Talk like a friendly therapist or just a friend and help the user with their mental health if they need it. Don't assume they are struggling immediately").startChat(history: history)
+            let ai = FirebaseAI.firebaseAI(backend: .googleAI())
+            let generativeModel = ai.generativeModel(
+                modelName: "gemini-3.6-flash",
+                generationConfig: GenerationConfig(temperature: 0.7),
+                systemInstruction: ModelContent(
+                    role: "system",
+                    parts: "You are a mental health expert who specializes in mental illnesses. Your name is Capy. Talk like a friendly therapist or just a friend and help the user with their mental health if they need it. Don't assume they are struggling immediately."
+                )
+            )
+
+            chat = generativeModel.startChat(history: history)
             
         }
         

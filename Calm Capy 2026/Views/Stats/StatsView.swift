@@ -10,7 +10,7 @@ import Charts
 
 
 struct StatsView: View {
-    @StateObject private var viewModel = MoodViewModel()
+    @State private var viewModel = MoodViewModel()
 
     var body: some View {
         VStack {

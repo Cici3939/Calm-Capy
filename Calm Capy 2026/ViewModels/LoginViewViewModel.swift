@@ -8,10 +8,11 @@
 import Foundation
 import FirebaseAuth
 
-class LoginViewViewModel: ObservableObject {
-    @Published var email = ""
-    @Published var password = ""
-    @Published var errorMessage = ""
+@Observable
+class LoginViewViewModel {
+    var email = ""
+    var password = ""
+    var errorMessage = ""
     
     init() {}
     
@@ -29,7 +30,7 @@ class LoginViewViewModel: ObservableObject {
         Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
             if let error = error as NSError? {
                 print("Error code: \(error.code)")
-                if let errorCode = AuthErrorCode.Code(rawValue: error.code) {
+                if let errorCode = AuthErrorCode(rawValue: error.code) {
                     switch errorCode {
                     case .invalidEmail:
                         self.errorMessage = "Email not found."

@@ -7,10 +7,12 @@
 
 import SwiftUI
 import AVFoundation
+import CoreML
 import SoundAnalysis
 
-class AudioClassifierViewModel: ObservableObject, MoodClassifierDelegate {
-    @Published var result: String = ""
+@Observable
+class AudioClassifierViewModel: MoodClassifierDelegate {
+    var result: String = ""
     private var audioEngine: AVAudioEngine
     private var inputBus: AVAudioNodeBus
     private var inputFormat: AVAudioFormat!
@@ -68,7 +70,7 @@ class AudioClassifierViewModel: ObservableObject, MoodClassifierDelegate {
         inputFormat = inputNode.inputFormat(forBus: inputBus)
         
         guard inputFormat.sampleRate > 0, inputFormat.channelCount > 0 else {
-            print("Invalid input format: \(inputFormat)")
+            print("Invalid input format: \(String(describing: inputFormat))")
             return
         }
         
@@ -120,16 +122,30 @@ class AudioClassifierViewModel: ObservableObject, MoodClassifierDelegate {
     func classifySound() {
         print("Setting up sound classification...")
         analyzer = SNAudioStreamAnalyzer(format: inputFormat)
-        let soundClassifier = try! MoodClassifierNew()
-        let classifySoundRequest = try! SNClassifySoundRequest(mlModel: soundClassifier.model)
         
         do {
+            let soundClassifier = try loadSoundClassifierModel()
+            let classifySoundRequest = try SNClassifySoundRequest(mlModel: soundClassifier)
             try analyzer.add(classifySoundRequest, withObserver: observer)
             print("Classification request added successfully.")
         } catch {
             print("Error in setting up classification: \(error.localizedDescription)")
         }
     }
+
+    private func loadSoundClassifierModel() throws -> MLModel {
+        guard let modelURL = Bundle.main.url(
+            forResource: "MoodClassifier 10",
+            withExtension: "mlmodel",
+            subdirectory: "MoodClassifier.mlproj/Models"
+        ) else {
+            throw AudioClassifierError.modelNotFound
+        }
+
+        let compiledModelURL = try MLModel.compileModel(at: modelURL)
+        return try MLModel(contentsOf: compiledModelURL)
+    }
+
     func stopClassification() {
         analyzer.removeAllRequests()
         let inputNode = audioEngine.inputNode
@@ -161,7 +177,8 @@ class AudioClassifierViewModel: ObservableObject, MoodClassifierDelegate {
     }
 }
 
-class ResultsObserver: NSObject, ObservableObject, SNResultsObserving {
+@Observable
+class ResultsObserver: NSObject, SNResultsObserving {
     var happy: Int = 0
     var sad: Int = 0
     var fearful: Int = 0
@@ -200,6 +217,14 @@ class ResultsObserver: NSObject, ObservableObject, SNResultsObserving {
     
     func requestDidComplete(_ request: SNRequest) {
         print("The request completed successfully!")
+    }
+}
+
+enum AudioClassifierError: LocalizedError {
+    case modelNotFound
+
+    var errorDescription: String? {
+        "Mood classifier model was not found in the app bundle."
     }
 }
 

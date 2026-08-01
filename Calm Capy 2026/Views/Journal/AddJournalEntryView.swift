@@ -10,7 +10,7 @@ struct AddJournalEntryView: View {
     @State private var title = ""
     @State private var content = ""
     @State private var date = Date()
-    @ObservedObject var viewModel: JournalViewModel
+    var viewModel: JournalViewModel
     @Binding var hideBackButton: Bool
     
     @State private var showAlert = false

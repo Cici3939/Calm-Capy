@@ -8,7 +8,6 @@
 import Foundation
 import FirebaseAuth
 import FirebaseFirestore
-import FirebaseFirestoreSwift
 
 struct Mood: Codable {
     var happy: Int
@@ -32,8 +31,9 @@ struct Mood: Codable {
     }
 }
 
-class MoodViewModel: ObservableObject {
-    @Published var moods: [Mood] = []
+@Observable
+class MoodViewModel {
+    var moods: [Mood] = []
     
     let timestamp = Calendar.current.date(bySettingHour: 0, minute: 0, second: 0, of: Date(), matchingPolicy: .nextTime, repeatedTimePolicy: .first, direction: .backward)!
     

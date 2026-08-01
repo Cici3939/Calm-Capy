@@ -12,8 +12,8 @@ struct JournalCard: View {
     let content: String
     let date: Date
     @State private var isExpanded = false
-    @ObservedObject var viewModel = JournalViewModel()
-    @StateObject var moodViewModel = MoodViewModel()
+    @State var viewModel = JournalViewModel()
+    @State var moodViewModel = MoodViewModel()
     let entryId: String
     let userId: String
     @Binding var hideBackButton: Bool

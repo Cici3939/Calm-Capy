@@ -7,7 +7,7 @@ import SwiftUI
 import Charts
 
 struct MoodChartView: View {
-    @ObservedObject var viewModel: MoodViewModel
+    var viewModel: MoodViewModel
 
     var body: some View {
         let moodCounts = calculateMoodCounts(viewModel: viewModel)

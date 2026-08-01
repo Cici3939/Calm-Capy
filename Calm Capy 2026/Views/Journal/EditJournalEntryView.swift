@@ -9,7 +9,7 @@ import SwiftUI
 struct EditJournalEntryView: View {
     @Environment(\.presentationMode) var presentationMode
     @State var entry: JournalEntry
-    @ObservedObject var viewModel: JournalViewModel
+    @Bindable var viewModel: JournalViewModel
     @Binding var hideBackButton: Bool
 
     var body: some View {

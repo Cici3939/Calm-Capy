@@ -6,8 +6,8 @@
 import SwiftUI
 
 struct MoodClassifierView: View {
-    @StateObject private var viewModel = AudioClassifierViewModel()
-    @StateObject private var moodViewModel = MoodViewModel()
+    @State private var viewModel = AudioClassifierViewModel()
+    @State private var moodViewModel = MoodViewModel()
     @State var moods: Mood
     @State var mood: String = ""
     @State private var isUpdated = false

@@ -1,17 +1,31 @@
 //
-//  Calm_Capy_2026App.swift
-//  Calm Capy 2026
+//  Calm_CapyApp.swift
+//  Calm Capy
 //
-//  Created by Cici Xing on 7/24/26.
+//  Created by Cici Xing on 7/12/24.
 //
 
 import SwiftUI
+import FirebaseCore
+import Firebase
+
+class AppDelegate: NSObject, UIApplicationDelegate {
+  func application(_ application: UIApplication,
+                   didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
+    FirebaseApp.configure()
+    return true
+  }
+}
 
 @main
-struct Calm_Capy_2026App: App {
+struct Calm_CapyApp: App {
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationView {
+                ContentView()
+            }
         }
     }
 }

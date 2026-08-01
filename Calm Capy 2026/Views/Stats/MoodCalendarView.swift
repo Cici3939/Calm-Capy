@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct MoodCalendarView: View {
-    @ObservedObject var viewModel: MoodViewModel
+    var viewModel: MoodViewModel
     @State private var currentDate = Date()
     @State private var selectedDate: Date?
     

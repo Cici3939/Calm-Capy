@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @StateObject var viewModel = ContentViewViewModel()
+    @State private var viewModel = ContentViewViewModel()
     
     var body: some View {
         if viewModel.isSignedIn, !viewModel.currentUserId.isEmpty {

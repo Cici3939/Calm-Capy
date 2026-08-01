@@ -9,10 +9,11 @@ import Foundation
 import FirebaseAuth
 import FirebaseFirestore
 
-class ProfileViewViewModel: ObservableObject {
+@Observable
+class ProfileViewViewModel {
     init() {}
     
-    @Published var user: User? = nil
+    var user: User? = nil
     
     func fetchUser() {
         guard let userId = Auth.auth().currentUser?.uid else {

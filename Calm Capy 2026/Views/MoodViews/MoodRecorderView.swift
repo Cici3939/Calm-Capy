@@ -9,7 +9,7 @@ import SwiftUI
 import FirebaseAuth
 
 struct MoodRecorderView: View {
-    @StateObject private var moodViewModel = MoodViewModel()
+    @State private var moodViewModel = MoodViewModel()
     @State private var isUpdated: Bool = false
     
     var body: some View {

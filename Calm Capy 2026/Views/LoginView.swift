@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct LoginView: View {
-    @StateObject var viewModel = LoginViewViewModel()
+    @State var viewModel = LoginViewViewModel()
     
     var body: some View {
         NavigationView {

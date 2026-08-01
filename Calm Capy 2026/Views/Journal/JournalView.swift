@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct JournalView: View {
-    @ObservedObject var viewModel = JournalViewModel()
+    @State var viewModel = JournalViewModel()
     @State private var hideBackButton = false
 
     var body: some View {

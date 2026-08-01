@@ -44,9 +44,7 @@
 		0FF05BB0301AC593006015E7 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF05B7C301AC593006015E7 /* MainView.swift */; };
 		0FF05BB1301AC593006015E7 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF05B7D301AC593006015E7 /* ProfileView.swift */; };
 		0FF05BB2301AC593006015E7 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF05B7E301AC593006015E7 /* RegisterView.swift */; };
-		0FF05BB3301AC593006015E7 /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF05B80301AC593006015E7 /* APIKey.swift */; };
-		0FF05BB4301AC593006015E7 /* Calm_Capy_2026App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF05B82301AC593006015E7 /* Calm_Capy_2026App.swift */; };
-		0FF05BB5301AC593006015E7 /* Calm_CapyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF05B83301AC593006015E7 /* Calm_CapyApp.swift */; };
+		0FF05BB5301AC593006015E7 /* Calm_Capy_2026App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF05B83301AC593006015E7 /* Calm_Capy_2026App.swift */; };
 		0FF05BB6301AC593006015E7 /* Chatbot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF05B85301AC593006015E7 /* Chatbot.swift */; };
 		0FF05BB7301AC593006015E7 /* ChatBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF05B86301AC593006015E7 /* ChatBubble.swift */; };
 		0FF05BB8301AC593006015E7 /* ChatBubbleShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF05B87301AC593006015E7 /* ChatBubbleShape.swift */; };
@@ -119,10 +117,8 @@
 		0FF05B7C301AC593006015E7 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		0FF05B7D301AC593006015E7 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		0FF05B7E301AC593006015E7 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
-		0FF05B80301AC593006015E7 /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
 		0FF05B81301AC593006015E7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		0FF05B82301AC593006015E7 /* Calm_Capy_2026App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calm_Capy_2026App.swift; sourceTree = "<group>"; };
-		0FF05B83301AC593006015E7 /* Calm_CapyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calm_CapyApp.swift; sourceTree = "<group>"; };
+		0FF05B83301AC593006015E7 /* Calm_Capy_2026App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calm_Capy_2026App.swift; sourceTree = "<group>"; };
 		0FF05B84301AC593006015E7 /* Calm-Capy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Calm-Capy-Info.plist"; sourceTree = "<group>"; };
 		0FF05B85301AC593006015E7 /* Chatbot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chatbot.swift; sourceTree = "<group>"; };
 		0FF05B86301AC593006015E7 /* ChatBubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBubble.swift; sourceTree = "<group>"; };
@@ -277,13 +273,11 @@
 		0FF05B8D301AC593006015E7 /* Calm Capy 2026 */ = {
 			isa = PBXGroup;
 			children = (
+				0FF05B83301AC593006015E7 /* Calm_Capy_2026App.swift */,
 				0FF05BCD301C1FB7006015E7 /* .gitignore */,
 				0FF05B8A301AC593006015E7 /* MoodClassifier.mlproj */,
 				0FF05B84301AC593006015E7 /* Calm-Capy-Info.plist */,
 				0FF05BBC301B0F01006015E7 /* GoogleService-Info.plist */,
-				0FF05B82301AC593006015E7 /* Calm_Capy_2026App.swift */,
-				0FF05B83301AC593006015E7 /* Calm_CapyApp.swift */,
-				0FF05B80301AC593006015E7 /* APIKey.swift */,
 				0FF05B7F301AC593006015E7 /* Views */,
 				0FF05B61301AC593006015E7 /* ViewModels */,
 				0FF05B85301AC593006015E7 /* Chatbot.swift */,
@@ -496,9 +490,7 @@
 				0FF05BB0301AC593006015E7 /* MainView.swift in Sources */,
 				0FF05BB1301AC593006015E7 /* ProfileView.swift in Sources */,
 				0FF05BB2301AC593006015E7 /* RegisterView.swift in Sources */,
-				0FF05BB3301AC593006015E7 /* APIKey.swift in Sources */,
-				0FF05BB4301AC593006015E7 /* Calm_Capy_2026App.swift in Sources */,
-				0FF05BB5301AC593006015E7 /* Calm_CapyApp.swift in Sources */,
+				0FF05BB5301AC593006015E7 /* Calm_Capy_2026App.swift in Sources */,
 				0FF05BB6301AC593006015E7 /* Chatbot.swift in Sources */,
 				0FF05BB7301AC593006015E7 /* ChatBubble.swift in Sources */,
 				0FF05BB8301AC593006015E7 /* ChatBubbleShape.swift in Sources */,

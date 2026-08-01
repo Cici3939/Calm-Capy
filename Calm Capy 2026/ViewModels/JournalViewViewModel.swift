@@ -8,7 +8,6 @@
 import Foundation
 import FirebaseAuth
 import FirebaseFirestore
-import FirebaseFirestoreSwift
 
 struct JournalEntry: Identifiable, Codable {
     @DocumentID var id: String?
@@ -28,9 +27,9 @@ struct JournalEntry: Identifiable, Codable {
     }
 }
 
-
-class JournalViewModel: ObservableObject {
-    @Published var entries: [JournalEntry] = []
+@Observable
+class JournalViewModel {
+    var entries: [JournalEntry] = []
     
     private let db = Firestore.firestore()
     private var userId: String? {
