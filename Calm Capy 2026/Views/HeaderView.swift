@@ -14,25 +14,34 @@ struct HeaderView: View {
     var body: some View {
         GeometryReader { geometry in
             ZStack {
-                RoundedRectangle(cornerRadius: 0)
-                    .foregroundColor(background)
-                    .rotationEffect(Angle(degrees: angle))
-                
-                VStack {
+                Rectangle()
+                    .foregroundStyle(background)
+                    .frame(width: geometry.size.width * 2, height: geometry.size.height)
+                    .rotationEffect(.degrees(angle))
+
+                VStack(spacing: 8) {
                     Text(title)
-                        .font(.system(size: 50))
-                        .foregroundStyle(Color.white)
+                        .font(.system(size: 80))
+                        .foregroundStyle(.white)
                         .bold()
+                        .lineLimit(1)
+                        .minimumScaleFactor(0.5)
+                        .frame(maxWidth: .infinity)
+
                     Text(subtitle)
-                        .font(.system(size: 23))
-                        .foregroundStyle(Color.white)
+                        .font(.system(size: 30))
+                        .foregroundStyle(.white)
+                        .lineLimit(1)
+                        .minimumScaleFactor(0.6)
+                        .frame(maxWidth: .infinity)
                 }
-                .padding(.top, 80)
+                .multilineTextAlignment(.center)
+                .padding(.horizontal, geometry.size.width * 0.25)
+                .padding(.top, geometry.size.height * 0.5)
+                .frame(width: geometry.size.width, height: geometry.size.height, alignment: .top)
             }
-            .frame(width: geometry.size.width * 3, height: 350)
+            .offset(x: geometry.size.width * -0.5)
         }
-        .frame(height: 350)
-        .offset(y: -200)
     }
 }
 
