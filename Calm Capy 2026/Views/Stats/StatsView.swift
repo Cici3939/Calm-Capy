@@ -13,40 +13,42 @@ struct StatsView: View {
     @State private var viewModel = MoodViewModel()
 
     var body: some View {
-        VStack {
-            Spacer()
-            
-            MoodCalendarView(viewModel: viewModel)
-                .offset(y: 30)
-
-            Spacer()
-            
-            Text("This Month:")
-                .foregroundStyle(Color("TextColor"))
-                .font(.system(size: 30))
-                .bold()
-                .frame(maxWidth: .infinity, alignment: .leading)
-                .padding(.leading)
-                .offset(y: 30)
-                .padding(.bottom)
-                .padding(.bottom)
-
-            TabView {
-                MoodCountView(viewModel: viewModel)
+        GeometryReader { geometry in
+            VStack {
+                Spacer()
                 
-                MoodChartView(viewModel: viewModel)
+                MoodCalendarView(viewModel: viewModel)
+                    .offset(y: 30)
+                
+                Spacer()
+                
+                Text("This Month:")
+                    .foregroundStyle(Color("TextColor"))
+                    .font(.system(size: 30))
+                    .bold()
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding(.leading)
+                    .offset(y: geometry.size.height / 20)
+                    .padding(.bottom)
+                    .padding(.bottom)
+                
+                TabView {
+                    MoodCountView(viewModel: viewModel)
+                    
+                    MoodChartView(viewModel: viewModel)
+                }
+                .tabViewStyle(PageTabViewStyle())
+                .onAppear {
+                    viewModel.fetchMoods()
+                }
+                
+                Rectangle()
+                    .frame(maxWidth: .infinity)
+                    .frame(height: 91)
+                    .foregroundStyle(Color("Default"))
             }
-            .tabViewStyle(PageTabViewStyle())
-            .onAppear {
-                viewModel.fetchMoods()
-            }
-
-            Rectangle()
-                .frame(maxWidth: .infinity)
-                .frame(height: 91)
-                .foregroundStyle(Color("Default"))
+            .background(Color("PrimaryColor")).ignoresSafeArea()
         }
-        .background(Color("PrimaryColor")).ignoresSafeArea()
     }
 }
 

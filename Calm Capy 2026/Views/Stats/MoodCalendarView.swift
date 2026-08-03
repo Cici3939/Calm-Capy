@@ -17,13 +17,14 @@ struct MoodCalendarView: View {
     let weekDays = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
 
     var body: some View {
+        
         ZStack {
             Spacer()
             
             Rectangle()
                 .foregroundStyle(Color("BorderColor"))
                 .cornerRadius(10)
-                .frame(width: 380, height: 420)
+                .frame(width: 400, height: 420)
                 .offset(y: 25)
             
             Rectangle()
@@ -86,6 +87,7 @@ struct MoodCalendarView: View {
 
                 .offset(y: 0)
                 
+                
                 HStack {
                     Button(action: {
                         currentDate = calendar.date(byAdding: .month, value: -1, to: currentDate) ?? currentDate
@@ -107,7 +109,7 @@ struct MoodCalendarView: View {
                     }
                 }
                 .padding(.horizontal)
-                .offset(y: -20)
+                .offset(y: -10)
             }
             .onAppear {
                 viewModel.fetchMoods()
