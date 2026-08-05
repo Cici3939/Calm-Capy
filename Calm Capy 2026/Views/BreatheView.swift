@@ -29,14 +29,14 @@ struct BreatheView: View {
                 }
                 
                 ZStack {
-                    Image("CapybaraWater")
+                    Image("Capybara Water")
                         .resizable().frame(width: 400, height: 400)
                     
-                    Image("CapybaraBody")
+                    Image("Capybara Body")
                         .resizable().frame(width: 400, height: 400)
                         .scaleEffect(x: 1.0, y: verticalScale)
                     
-                    Image("CapybaraFace")
+                    Image("Capybara Face")
                         .resizable().frame(width: 400, height: 400)
                         .offset(y: offsetY)
 
