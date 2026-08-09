@@ -122,8 +122,6 @@ SwiftUI Chat Interface
 
 The Gemini integration allows Calm Capy to move beyond static responses and provide dynamic conversations.
 
-I designed the integration so that API credentials are not hard-coded directly into the client application.
-
 ### Why Gemini?
 
 A rule-based chatbot would require manually creating responses for every possible conversation. Gemini allows the application to generate responses dynamically and makes the interaction much more flexible.
