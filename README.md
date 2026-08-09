@@ -209,6 +209,10 @@ A hand-drawn capybara is incorporated into the animation to provide visual pacin
           │
           ▼
         Exhale
+       ┌──────┐
+       │ 🦫   │
+       │Shrink│
+       └──────┘ 
 ```
 
 The animation was implemented using SwiftUI rather than relying on a third-party animation library.
@@ -222,7 +226,6 @@ The statistics screen transforms raw mood entries into visual information that u
 It includes:
 
 * Calendar-based mood history
-* Mood counts
 * Tabular data
 * Bar charts
 
@@ -242,13 +245,13 @@ The application uses simple navigation and focused screens so users do not have 
 
 ### 2. Approachable visual design
 
-I created the capybara illustrations myself and incorporated them throughout the application.
+I designed and drew the capybara illustrations myself and incorporated them throughout the application.
 
 The visual system uses muted colors, rounded components, and simple layouts to create a calm and consistent interface.
 
 ### 3. User control
 
-AI and machine-learning features are optional. Users can manually record their mood instead of relying on the speech classifier, and the core self-care tools remain usable without the chatbot.
+AI and machine-learning features are optional. Users can manually record their mood instead of relying on the speech classifier, and the core self-care tools remain usable without the chatbot or internet.
 
 ---
 
@@ -307,7 +310,7 @@ The actual organization may differ depending on the current version of the repos
 
 One of the most significant bugs I encountered involved the mood calendar.
 
-Initially, I grouped mood information by month. While this worked for aggregate statistics, it made it impossible to reliably associate individual mood data with a specific calendar day.
+Initially, I grouped mood information by month. While this worked for aggregate statistics, it made it impossible to correctly display individual mood data with a specific calendar day.
 
 I eventually traced the problem to the way timestamps were being stored and compared.
 
@@ -452,6 +455,10 @@ The audio model could be retrained using a larger and more diverse dataset and e
 ### On-device intelligence
 
 More AI functionality could be moved on-device to reduce network dependence and improve privacy.
+
+### On-device data storage
+
+Journal entries could be stored on-device so that they would not be visible in the backend in Firebase.
 
 ### Accessibility
 
